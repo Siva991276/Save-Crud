@@ -1,15 +1,31 @@
-GET http://localhost:3032/
+GET http://localhost:4005/
 ###
-POST http://localhost:3032/signup
+POST http://localhost:4005/signup
 Content-Type: application/json
 
 {
-    "typeOfReg":"jobseeker",
-    "fullname":"munikumar",
-    "email":"munikumar@gmail.com",
-    "password":"Muni@123",
-    "mobileNum":9562541254,
+    "typeOfRegistration":"Jobseeker",
+    "fullname":"Sri",
+    "email":"sri@gmail.com",
+    "password":"sri@123",
+    "mobileNumber":9658451245,
     "gender":"Male"
+ 
+     
+}
+###
+GET http://localhost:4005/allusers
+###
+GET http://localhost:4005/user/64be038d864e273d03c76073
+###
+PUT  http://localhost:4005/user/64be038d864e273d03c76073
+Content-Type: application/json
+
+{
+    
+    "fullname":"Sri",
+    "mobileNumber":9658451245
+     
  
      
 }

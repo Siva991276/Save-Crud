@@ -35,4 +35,6 @@ const userRegisterData = new mongoose.Schema({
 }
 )
 
-module.exports = mongoose.model("userRegisterData",Schema);
+const userData = mongoose.model("userData", userRegisterData);
+
+module.exports = userData;
