@@ -72,12 +72,12 @@ app.get("/allusers", async (req, res) => {
 })
 
 //get single user details
-app.get("/user/:id", async(req,res)=>{
-    const {id} =req.params
+app.get("/user/:id", async (req, res) => {
+    const { id } = req.params
 
-    const user = await userData.findById({_id: id})
+    const user = await userData.findById({ _id: id })
 
-    if(!user){
+    if (!user) {
         res.status(400).json("User Not Found")
     }
     res.status(200).json(user)
@@ -85,11 +85,11 @@ app.get("/user/:id", async(req,res)=>{
 
 //update perticular user data
 
-app.put("/user/:id", async(req,res)=>{
-    const {id} = req.params
+app.put("/user/:id", async (req, res) => {
+    const { id } = req.params
     const user = await userData.findByIdAndUpdate(id, req.body)
 
-    if(!user){
+    if (!user) {
         res.status(400).json("User Not Found")
     }
     res.status(200).json("users data updated successfully")
@@ -98,6 +98,7 @@ app.put("/user/:id", async(req,res)=>{
 app.listen(4005, () => {
     console.log("Server running at 4005");
 })
+//siva
 
 
 
