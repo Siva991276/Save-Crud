@@ -23,9 +23,9 @@ Content-Type: application/json
 
 {
     
-    "fullname":"Sri",
-    "mobileNumber":9658451245
-     
- 
-     
+    "fullname":"srikanth",
+    "mobileNumber":9658451245,
 }
+
+###
+DELETE http://localhost:4005/user/64be55d5e2e6fca627f6b077

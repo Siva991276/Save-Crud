@@ -95,10 +95,23 @@ app.put("/user/:id", async (req, res) => {
     res.status(200).json("users data updated successfully")
 })
 
+
+//delete perticular user data
+
+app.delete("/user/:id", async(req,res)=>{
+    const {id} =req.params
+    const deleteuser  = await userData.findByIdAndDelete(id)
+
+    if(!deleteuser){
+        res.status(404).json("Not found!")
+    }
+    res.status(200).json("user Deleted successfully")
+})
+
 app.listen(4005, () => {
     console.log("Server running at 4005");
 })
-//siva
+
 
 
 
